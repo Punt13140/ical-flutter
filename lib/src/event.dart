@@ -87,9 +87,7 @@ class IEvent extends ICalendarElement with EventToDo {
     super.deserialize(structure);
     start = _parseDate(structure["DTSTART"]);
     end = _parseDate(structure["DTEND"]);
-    location = structure["LOCATION"] != null
-      ? IEventStatus._(structure["LOCATION"].value)
-        : null;
+    location = structure["LOCATION"].value;
     // TODO support duration
     transparency = structure["TRANSP"] != null
       ? ITimeTransparency._(structure["TRANSP"].value)
