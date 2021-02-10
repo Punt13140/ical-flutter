@@ -161,6 +161,7 @@ abstract class ICalendarElement implements AbstractSerializer, AbstractDeseriali
     categories = structure["CATEGORIES"]?.value?.split(",");
     comment = structure["COMMENT"]?.value;
     summary = structure["SUMMARY"]?.value;
+    description = structure["DESCRIPTION"]?.value;
     url = structure["URL"]?.value;
     final classificationString = structure["CLASSIFICATION"]?.value;
     if(classificationString != null) classification = IClass._(classificationString);
